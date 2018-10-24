@@ -11,9 +11,7 @@ router.get('/',function (req,res,next) {
 
 });
 
-router.get('/:string',function (req,res,next) {
-  res.send('String ist : ' + req.params.string);
-});
+
 
 router.get('/invert/:string', function (req,res,next) {
 
@@ -26,6 +24,14 @@ router.get('/double/:zahl',function (req,res,next) {
 
 router.get('/square/:zahl',function (req,res,next) {
   res.send(functions.square(req.params.zahl).toString());
+});
+
+router.get('/date',function (req,res) {
+  res.send(functions.date().toString());
+});
+
+router.get('/:string',function (req,res,next) {
+  res.send('String ist : ' + req.params.string);
 });
 
 

@@ -12,5 +12,9 @@ class Functions {
   {
       if(!isNaN(zahl))return zahl*zahl;
   }
+
+  static date(){
+    return Date();
+  }
 }
 module.exports = Functions;
