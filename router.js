@@ -41,6 +41,10 @@ router.get('/suchen', function (req,res) {
 
 })
 
+router.get('/cookie' , function (req,res) {
+  res.send(req.cookies);
+})
+
 router.get('/text/:string',function (req,res,next) {
 
   res.send('String ist : ' + req.params.string);
