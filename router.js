@@ -7,7 +7,7 @@ router.use(function logging(req,res,next) {
 })
 
 router.get('/',function (req,res,next) {
-  res.send('Router says Hello');
+  res.send('Root says Hello');
 
 });
 
@@ -23,17 +23,28 @@ router.get('/double/:zahl',function (req,res,next) {
 });
 
 router.get('/square/:zahl',function (req,res,next) {
+
   res.send(functions.square(req.params.zahl).toString());
+
 });
+
 
 router.get('/date',function (req,res) {
+
   res.send(functions.date().toString());
+
 });
 
-router.get('/:string',function (req,res,next) {
+router.get('/suchen', function (req,res) {
+
+  res.redirect('https://www.google.de/?hl=de');
+
+})
+
+router.get('/text/:string',function (req,res,next) {
+
   res.send('String ist : ' + req.params.string);
+
 });
-
-
 
 module.exports = router;
