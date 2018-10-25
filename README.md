@@ -5,6 +5,7 @@
 ### [Express.js](https://expressjs.com/de/)
 
 Test WebService for "useles" functions 
+#### From root ('/') availabe functions
 1. '/double/number'
 2. '/square/number'
 3. '/date'
