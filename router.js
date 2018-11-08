@@ -51,9 +51,9 @@ router.get('/text/:string',function (req,res,next) {
 
 });
 
-router.get('/speichern/:text', function (req,res,next) {
-  res.send(req.params.text + 'gespeichert ! ');
-  functions.speichern(req.params.text);
+router.get('/speichern/:name/:value', function (req,res,next) {
+  res.send(req.params.value + ' wurde gespeichert !\n '+ req.params.name + '----> Accesable through this keyName');
+  functions.speichern(req.params.name,req.params.value);
 });
 
 router.get('/lesen/:name',function (req,res,next) {

@@ -1,4 +1,14 @@
+if (typeof localStorage === "undefined" || localStorage === null) {
+  var LocalStorage = require('node-localstorage').LocalStorage;
+  localStorage = new LocalStorage('./scratch');
+}
+localStorage.setItem('myFirstKey', 'myFirstValue');
+console.log(localStorage.getItem('myFirstKey'));
+
 class Functions {
+
+
+
 
   static invert(string){
     return string.split("").reverse().join("");
@@ -17,12 +27,12 @@ class Functions {
     return Date();
   }
 
-  static speichern(text){
-    localStorage.setItem('test',text);
+  static speichern(name,value){
+    localStorage.setItem(name,value);
   }
 
   static lesen(text){
-  return localStorage.getItem(test);
+  return localStorage.getItem(text);
 
   }
 }
