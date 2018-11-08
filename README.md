@@ -12,3 +12,5 @@ Test WebService for "useles" functions
 4. '/invert/text'
 5. '/cookie'
 6. '/text/string'
+7. /speichern/key/value
+8. /lesen/key
