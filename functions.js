@@ -16,5 +16,14 @@ class Functions {
   static date(){
     return Date();
   }
+
+  static speichern(text){
+    localStorage.setItem('test',text);
+  }
+
+  static lesen(text){
+  return localStorage.getItem(test);
+
+  }
 }
 module.exports = Functions;

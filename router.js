@@ -4,7 +4,7 @@ var functions = require('./functions');
 
 router.use(function logging(req,res,next) {
   next();
-})
+});
 
 router.get('/',function (req,res,next) {
   res.send('Root says Hello');
@@ -50,5 +50,16 @@ router.get('/text/:string',function (req,res,next) {
   res.send('String ist : ' + req.params.string);
 
 });
+
+router.get('/speichern/:text', function (req,res,next) {
+  res.send(req.params.text + 'gespeichert ! ');
+  functions.speichern(req.params.text);
+});
+
+router.get('/lesen/:name',function (req,res,next) {
+  res.send(functions.lesen(req.params.name));
+});
+
+
 
 module.exports = router;
